@@ -23,7 +23,7 @@ h1,h2,h3,h4,.logo{font-family:var(--display);font-weight:800;font-stretch:88%;le
 .topbar .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .topbar a{color:#fff;font-weight:600}
 header.site{position:sticky;top:0;z-index:50;background:rgba(244,246,244,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:16px;position:relative}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;gap:16px;position:relative}
 .logo{font-size:1.35rem;color:var(--ink);text-decoration:none;line-height:1}
 .logo span{display:block;color:var(--lake);font-weight:600;margin-top:2px}
 nav.main a{color:var(--ink);font-weight:600;font-size:.97rem;margin:0 12px;padding:6px 0;text-decoration:none;border-bottom:3px solid transparent}
@@ -146,3 +146,50 @@ footer h4{color:#fff;margin-bottom:12px;font-size:1.25rem;font-stretch:90%}
 }
 
 .prose p+p{margin-top:14px}.prose h2{margin-bottom:18px;max-width:20em}
+
+/* articles */
+.article{max-width:1200px}
+.meta-line{color:var(--mut);font-size:.92rem;margin:-18px 0 26px}
+.hero-fig{margin:0}
+.hero-fig img{width:100%;height:clamp(240px,40vw,440px);object-fit:cover;border-radius:var(--rad)}
+.hero-fig figcaption,.article-body figcaption{font-size:.92rem;color:var(--mut);margin-top:8px;max-width:70ch}
+.article-grid{display:grid;grid-template-columns:230px minmax(0,72ch);gap:56px;margin-top:40px;align-items:start}
+.toc{position:sticky;top:96px;border-left:3px solid var(--lake);padding-left:16px;font-size:.95rem}
+.toc ol{margin:10px 0 0 18px}.toc li{margin-bottom:6px}.toc a{color:var(--ink)}
+.article-body h2{font-size:clamp(1.55rem,2.5vw,2.05rem);margin:2.3em 0 .6em;scroll-margin-top:96px}
+.article-body h2:first-child{margin-top:0}
+.article-body h3{font-size:1.25rem;margin:1.6em 0 .4em}
+.article-body p{margin:0 0 1.1em;max-width:none}
+.article-body ul,.article-body ol{margin:0 0 1.2em 1.3em}.article-body li{margin-bottom:.45em}
+.article-body figure{margin:1.8em 0}
+.article-body figure img{width:100%;border-radius:var(--rad)}
+.cta-band{background:var(--ink);color:#e6f0f1;border-radius:var(--rad);padding:32px;margin-top:64px;display:flex;gap:24px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.cta-band h2{color:#fff;margin-bottom:6px}.cta-band p{max-width:46ch}
+.cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+.related{margin-top:64px}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;margin-top:20px}
+.rel-card{display:flex;flex-direction:column;gap:6px;border-top:3px solid var(--ink);padding-top:14px;text-decoration:none;color:var(--ink)}
+.rel-card b{font-family:var(--display);font-stretch:90%;font-size:1.15rem;line-height:1.2}
+.rel-card span{color:var(--mut);font-size:.95rem}
+.rel-card:hover b{color:var(--lake);text-decoration:underline}
+.guide-list{list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px 32px}
+.guide-list a{display:flex;flex-direction:column;gap:6px;border-top:3px solid var(--ink);padding-top:14px;text-decoration:none;color:var(--ink)}
+.guide-list b{font-family:var(--display);font-stretch:90%;font-size:1.2rem;line-height:1.2}
+.guide-list span{color:var(--mut);font-size:.96rem}
+.guide-list a:hover b{color:var(--lake);text-decoration:underline}
+@media(max-width:920px){.article-grid{grid-template-columns:1fr;gap:28px}.toc{position:static}}
+
+/* nav fit */
+header.site .wrap{max-width:1400px}
+nav.main a{white-space:nowrap;margin:0 9px}
+.hero-fig{max-width:960px}
+.hero-fig img{height:clamp(220px,36vw,400px)}
+@media(max-width:1280px){
+ nav.main{display:none;position:absolute;top:100%;right:0;background:#fff;border:1px solid var(--line);border-radius:var(--rad);box-shadow:0 20px 40px rgba(8,34,45,.18);padding:12px 20px;flex-direction:column;min-width:240px}
+ nav.main.open{display:flex}
+ nav.main a{margin:6px 0}
+ .burger{display:block}
+ .nav .btn{padding:10px 15px;font-size:.88rem;white-space:nowrap}
+ .logo{font-size:1.15rem}
+ .nav{gap:10px}
+}
