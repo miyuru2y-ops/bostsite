@@ -57,12 +57,12 @@ nav.main a:hover{border-bottom-color:var(--buoy)}
 /* sections */
 section{padding:clamp(56px,8vw,104px) 0}
 .alt{background:var(--mist)}
-h2{font-size:clamp(2rem,4.4vw,3.3rem);color:var(--ink);margin-bottom:14px;text-wrap:balance}
+h1,h2{font-size:clamp(2rem,4.4vw,3.3rem);color:var(--ink);margin-bottom:14px;text-wrap:balance}
 .crumb{color:var(--mut);font-size:.92rem;margin-bottom:14px}
-.crumb+h2{font-size:clamp(2.3rem,5.6vw,4.2rem);font-stretch:92%;line-height:1;max-width:16em}
+.crumb+h1{font-size:clamp(2.3rem,5.6vw,4.2rem);font-stretch:92%;line-height:1;max-width:16em}
 h3{font-size:1.35rem;color:var(--ink)}
 .sub{color:var(--mut);max-width:62ch;margin:0 0 40px;font-size:1.1rem}
-.crumb+h2+.sub{margin-top:18px}
+.crumb+h1+.sub{margin-top:18px}
 p{max-width:70ch}
 
 /* fleet cards */
@@ -144,3 +144,5 @@ footer h4{color:#fff;margin-bottom:12px;font-size:1.25rem;font-stretch:90%}
  .hero h1::after{animation:none}
  *{transition:none!important}
 }
+
+.prose p+p{margin-top:14px}.prose h2{margin-bottom:18px;max-width:20em}
