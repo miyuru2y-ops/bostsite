@@ -14,7 +14,7 @@
 <header class="site"><div class="wrap nav"><a class="logo" href="index.html">Bootsvermietung <span>Zürichsee</span></a>
 <button class="burger" aria-label="Menü" onclick="document.querySelector('nav.main').classList.toggle('open')">☰</button><nav class="main"><a href="index.html">Startseite</a><a href="unsere-boote.html">Unsere Boote</a><a href="preise.html">Preise</a><a href="wakeboard-wasserski.html">Wakeboard &amp; Wasserski</a><a href="events.html">Events</a><a href="mietkonditionen.html">Mietkonditionen</a><a href="ratgeber.html">Ratgeber</a><a href="kontakt.html">Kontakt</a></nav>
 <a class="btn" href="kontakt.html">Sofort reservieren</a></div></header><main>
-<section class="hero"><img class="hero-img" src="assets/img/hero-1280.webp" srcset="assets/img/hero-800.webp 800w, assets/img/hero-1280.webp 1280w, assets/img/hero-1920.webp 1920w" sizes="100vw" width="1280" height="960" fetchpriority="high" alt=""><video class="hero-img hero-vid" muted loop playsinline preload="none" poster="assets/img/hero-1280.webp" aria-hidden="true" tabindex="-1" width="1280" height="960"></video><div class="wrap">
+<section class="hero"><img class="hero-img" src="assets/img/hero-v-1280.webp" srcset="assets/img/hero-v-800.webp 800w, assets/img/hero-v-1280.webp 1280w, assets/img/hero-v-1920.webp 1920w" sizes="100vw" width="1280" height="720" fetchpriority="high" alt=""><video class="hero-img hero-vid" muted loop playsinline preload="none" poster="assets/img/hero-v-1280.webp" aria-hidden="true" tabindex="-1" width="1280" height="720"></video><div class="wrap">
 <h1>Boot mieten auf dem Zürichsee – Sportboote ab Hafen Wollishofen</h1>
 <p class="lead">Motorboot mieten auf dem Zürichsee: vom wendigen Cranchi-Sportboot bis zur MasterCraft zum Waken und Surfen hinter dem Boot. Alle Boote mit Bootsführerschein – oder entspannt mit Skipper.</p>
 <a class="btn gold" href="kontakt.html">Sofort reservieren</a> <a class="btn ghost" href="unsere-boote.html">Unsere Boote ansehen</a>
@@ -68,6 +68,6 @@
 (function(){var v=document.querySelector('.hero-vid');if(!v)return;
 if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
 var c=navigator.connection;if(c&&(c.saveData||/2g/.test(c.effectiveType||'')))return;
-function go(){v.src=v.canPlayType('video/webm; codecs="vp9"')?'assets/img/hero-loop.webm':'assets/img/hero-loop.mp4';v.addEventListener('playing',function(){v.classList.add('on')},{once:true});var p=v.play();if(p&&p.catch)p.catch(function(){})}
+function go(){v.src=v.canPlayType('video/mp4; codecs="avc1.4d401f"')?'assets/img/hero-loop.mp4':'assets/img/hero-loop.webm';v.addEventListener('playing',function(){v.classList.add('on')},{once:true});var p=v.play();if(p&&p.catch)p.catch(function(){})}
 if(document.readyState==='complete')go();else addEventListener('load',go,{once:true})})();
 </script></body></html>
